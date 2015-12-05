@@ -41,6 +41,8 @@
 	<script src="<?php echo JS;?>sparklines.js"></script>	
 	<script src="<?php echo JS;?>charts.js"></script>
 	<script src="<?php echo JS;?>jquery.slimscroll.min.js"></script>
+	<script src="<?php echo JS;?>jquery.validate.min.js"></script>
+	<script src="<?php echo JS;?>custom_changes.js"></script>
   <script>
 
       //knob
