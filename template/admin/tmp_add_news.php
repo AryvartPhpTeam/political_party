@@ -3,11 +3,11 @@
           <section class="wrapper">
 		  <div class="row">
 				<div class="col-lg-12">
-					<h3 class="page-header"><i class="fa fa-file-text-o"></i> Form elements</h3>
+					<h3 class="page-header"><i class="fa fa-file-text-o"></i> Add News</h3>
 					<ol class="breadcrumb">
-						<li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
-						<li><i class="icon_document_alt"></i>Forms</li>
-						<li><i class="fa fa-file-text-o"></i>Form elements</li>
+						<li><i class="fa fa-home"></i><a href="dashboard.php">Home</a></li>
+						<li><i class="icon_document_alt"></i>Add News</li>
+						
 					</ol>
 				</div>
 			</div>
@@ -37,7 +37,7 @@
 								  <div class="form-group">
                                       <label class="col-sm-2 control-label">Image</label>
                                       <div class="col-sm-10">
-                                          <input type="file" name="image" class="form-control" placeholder="placeholder">
+                                          <input type="file" name="image"  placeholder="placeholder">
 										  <?php if(isset($news) && !empty($news['image'])) {?>
 											<img src="<?php echo BASE_URL.'uploads/'.$news['image']?>" width="50" height="50">
 											<input type="hidden" name="old_image" value="<?php echo $news['image'];?>">

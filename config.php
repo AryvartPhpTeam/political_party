@@ -2,9 +2,9 @@
 define ( 'DB_HOST', 'localhost' );
 define ( 'DB_USER', 'root' );
 define ( 'DB_PASSWORD', '' );
-define ( 'DB_DB', 'political_party' );
+define ( 'DB_DB', 'foodjiffdb' );
 
-define ( 'BASE_URL', '/vinodhagan/corephp/' );
+define ( 'BASE_URL', 'http://localhost/vinodhagan/corephp/' );
 define ( 'BASE_PATH', dirname ( __FILE__ ).'/' );
 
 define ( 'INCLUDE_PATH', BASE_PATH.'includes/' );

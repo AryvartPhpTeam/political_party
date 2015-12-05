@@ -1,14 +1,10 @@
 <?php
-if(isset($_SESSION['user']))
-{
-	header("location:dashboard.php");
-	exit;
-}
+
 
 if(isset($_POST['submit']))
 {
 	$username = $_POST['username'];
-	$password = $_POST['password'];
+	$password = md5($_POST['password']);
 	
 	$res = $sqlobj->query("Select * FROM users where username='$username' and password = '$password'");
 	if(count($res))
