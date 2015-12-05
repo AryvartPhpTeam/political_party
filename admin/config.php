@@ -4,7 +4,7 @@ define ( 'DB_USER', 'root' );
 define ( 'DB_PASSWORD', '' );
 define ( 'DB_DB', 'politics' );
 
-define ( 'BASE_URL', 'http://localhost/political/project/' );
+define ( 'BASE_URL', 'http://localhost/project/political/project/' );
 define ( 'BASE_PATH', dirname ( __FILE__ ).'/../' );
 
 define ( 'INCLUDE_PATH', BASE_PATH.'includes/' );

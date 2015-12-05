@@ -1,8 +1,8 @@
 <?php
 define ( 'DB_HOST', 'localhost' );
 define ( 'DB_USER', 'root' );
-define ( 'DB_PASSWORD', '' );
-define ( 'DB_DB', 'foodjiffdb' );
+define ( 'DB_PASSWORD', 'ssh' );
+define ( 'DB_DB', 'political_party' );
 
 define ( 'BASE_URL', 'http://localhost/vinodhagan/corephp/' );
 define ( 'BASE_PATH', dirname ( __FILE__ ).'/' );
