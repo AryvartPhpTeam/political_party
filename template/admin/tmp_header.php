@@ -226,7 +226,7 @@
                                 <img alt="" src="img/avatar1_small.jpg">
                             </span>
                             <span class="username">Jenifer Smith</span>
-                            <b class="caret"></b>
+							<b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu extended logout">
                             <div class="log-arrow-up"></div>
@@ -253,6 +253,9 @@
                             </li>
                         </ul>
                     </li>
+							<li>
+                               <a href="<?php echo BASE_URL.'admin/settings_page.php'?>">Settings</a>
+                            </li>
                     <!-- user login dropdown end -->
                 </ul>
                 <!-- notificatoin dropdown end-->
