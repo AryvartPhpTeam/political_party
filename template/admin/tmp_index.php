@@ -17,7 +17,7 @@
                 <span class="pull-right"> <a href="#"> Forgot Password?</a></span>
             </label>
             <button name="submit" class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
-            <button class="btn btn-info btn-lg btn-block" type="submit">Signup</button>
+            <a href="<?php echo BASE_URL.'admin/signup.php'?>" class="btn btn-info btn-lg btn-block" type="submit" >Signup</a>
         </div>
       </form>
 
