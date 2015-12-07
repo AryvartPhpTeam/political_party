@@ -14,10 +14,8 @@
               <div class="row">
                   <div class="col-lg-12">
                       <section class="panel">
-					  
-					  
                           <header class="panel-heading">
-                             <?php echo isset($news) ? 'Edit' : 'Add';?> Form 
+                             <?php echo isset($pages) ? 'Edit' : 'Add';?> Form 
                           </header>
                           <div class="panel-body">
                               <form class="form-horizontal " method="post" enctype="multipart/form-data">
@@ -40,10 +38,20 @@
                                       <label class="col-sm-2 control-label">Image</label>
                                       <div class="col-sm-10">
                                           <input type="file" name="image"  placeholder="placeholder">
-										  <?php if(isset($news) && !empty($news['image'])) {?>
-											<img src="<?php echo BASE_URL.'uploads/'.$news['image']?>" width="50" height="50">
-											<input type="hidden" name="old_image" value="<?php echo $news['image'];?>">
+										  <?php if(isset($pages) && !empty($pages['image'])) {?>
+											<img src="<?php echo BASE_URL.'uploads/'.$pages['image']?>" width="50" height="50">
+											<input type="hidden" name="old_image" value="<?php echo $pages['image'];?>">
 										  <?php }?>
+                                      </div>
+                                  </div>
+								  <div class="form-group">
+                                      <label class="col-sm-2 control-label">Status</label>
+                                      <div class="col-sm-10">
+                                          <select name="status"  class="form-control" placeholder="placeholder">
+										  <option >select</option>
+										  <option value="1">yes</option>
+										  <option value="0">no</option>
+										  </select>
                                       </div>
                                   </div>
                                   

@@ -14,7 +14,7 @@ if(isset($_POST['submit']))
 	$status = $_POST['status'];
 	$role= $_POST['role'];
 	$confirm_code=md5(uniqid(rand(1,1000)));
-	
+	 
 	
 	$signup=$sqlobj->query("insert into users(username, firstname,lastname,email, password,status,role,confirm_code) values('$username','$firstname','$lastname','$email', '$password', '$status', '$role','$confirm_code')");
 	if($signup)
@@ -27,10 +27,10 @@ if(isset($_POST['submit']))
              Please click the below link to activate your account:
              http://'.BASE_URL.'/signup.php?verify='.base64_encode(base64_encode($email)); 
 
-			$headers = 'From:noreply@yourwebsite.com' . "\r\n"; 
+            $headers = 'From:noreply@yourwebsite.com' . "\r\n"; 
 			mail($to, $subject, $message, $headers); 
 	}
-	header("location:index.php");
+	
 }
 
 
