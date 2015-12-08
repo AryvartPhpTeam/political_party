@@ -14,6 +14,7 @@ $(document).ready(function() {
 		}
                 
 	});
+
 	$("#signup_form").validate({
 		rules: {
 			email: {
@@ -44,6 +45,7 @@ $(document).ready(function() {
 		}
                 
 	});
+
 	$("#reset_form").validate({
 		rules: {
 			
@@ -93,4 +95,54 @@ $(document).ready(function() {
 		}
                 
 	});
+
+	
+	$("#events_form").validate({
+		rules: {
+		    eventtitle: "required",
+			description: "required",
+			startdateandtime:"required",
+			enddateandtime:"required",
+			location:"required",
+			status:"required",
+			image:"required",
+			eventhead:"required",
+			eventcontact:"required",
+			noofparticipant:"required",
+			eventwebsite: {
+                    required: true,
+                    eventwebsite: true
+                },
+			
+		},
+		messages:{
+			eventtitle: "Please enter your name",
+			description:"please enter your description",
+			startdateandtime:"please enter your start date and time",
+			enddateandtime:"please enter your end date and time",
+			location:"please enter your location",
+			status:"please enter your status",
+			eventhead:"please enter your event head",
+			eventcontact:"please enter your event contact",
+			noofparticipant:"please enter your no of participant",
+			eventwebsite: "Please enter a valid email address.",
+			image:"please choose your image",
+		}
+                
+	
+	
+});
+
+	$('#check').click(function(event) { 
+			if($(this).is(":checked")) {
+				$('.checkbox').each(function(){
+					$(this).prop("checked",true);
+				});
+			}
+		    else{
+				$('.checkbox').each(function(){
+					$(this).prop("checked",false);
+				});
+			}	
+        });   
 });

@@ -19,6 +19,7 @@
                           </header>
                           <div class="panel-body">
                               <form class="form-horizontal " method="post" >
+							    <?php if(isset($error1)){?><p style="color:red;"><?php echo $error1;?></p><?php }?>
                                 <?php if(isset($error)){?><p style="color:red;"><?php echo $error;?></p><?php }?>  
                                   <div class="form-group">
                                       <label class="col-sm-2 control-label">OLD PASSWORD</label>
