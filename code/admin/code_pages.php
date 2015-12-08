@@ -12,9 +12,7 @@ if(isset($_GET['delete']) && !empty($_GET['delete']))
 	exit;
 }
 
-<<<<<<< Updated upstream
-$news_res = $sqlobj->query("select * from pages");
-=======
+
 $pages_res = $sqlobj->query("select * from pages");
 
  if(isset($_POST['submit']) && isset($_POST["bulk"] ))
@@ -32,8 +30,7 @@ $pages_res = $sqlobj->query("select * from pages");
 			header("location:pages.php");	
 		}
 	}	
-							
->>>>>>> Stashed changes
+
 
 if(file_exists(TEMPLATE_PATH.$page.'.php'))
 	include(TEMPLATE_PATH.'common.php');

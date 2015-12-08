@@ -58,19 +58,7 @@
                                   </div>
                                   </td>
                               </tr>
-                               <?php }?>                            
-                           </tbody>
-                        </table>
-                      </section>
-                  </div>
-              </div>
-                          </div>
-                      </section>
-					 </div>
-              </div>
-=======
-                                 </td>
-                             </tr>
+                               
                                <?php }?>                            
                            </tbody>
                         </table>
@@ -83,7 +71,6 @@
             </section>
 			</div>
            </div>
->>>>>>> Stashed changes
               <!-- page end-->
           </section>
       </section>
