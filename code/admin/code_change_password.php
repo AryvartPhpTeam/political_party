@@ -8,16 +8,19 @@ if(!isset($_SESSION['user']))
 if(isset($_POST['submit']))
 {
 	$results = $sqlobj->query("SELECT id,password from users where id =". $_SESSION['user']['id']);
-	if (md5($_POST["newPassword"]) == ($_POST["confirmPassword"]))
+	if (($_POST["newPassword"]) == ($_POST["confirmPassword"]))
 	{
-		if (($_POST["currentPassword"]) == $results[0]["password"])
-	{
-		
-		$newPassword=md5($_POST['newPassword']);
-		$sqlobj->query("UPDATE users set password='" . $newPassword . "'WHERE id =". $_SESSION['user']['id']);
-		header("location:dashboard.php");
-		exit;
-	}
+		if (md5($_POST["currentPassword"]) == $results[0]["password"])
+		{
+			$newPassword=md5($_POST['newPassword']);
+			$sqlobj->query("UPDATE users set password='" . $newPassword . "'WHERE id =". $_SESSION['user']['id']);
+			header("location:dashboard.php");
+			exit;
+		}
+		else 
+		{
+			$error1 = 'Mismatch old password. Please Try Again!!';
+		}
 	}
 	else 
 	{
