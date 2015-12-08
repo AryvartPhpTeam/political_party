@@ -46,15 +46,17 @@
 </head>
 	<body class="login-img3-body">
 		<?php 	
-				if($page != 'index' && $page != 'signup'&& $page != 'forgot'&&$page != 'reset')
+
+				if($page != 'index' && $page != 'signup' && $page != 'forgot' && $page != 'reset' )
 				include(TEMPLATE_PATH.'header.php');
 				
-				if($page != 'index'&& $page != 'signup'&&$page != 'forgot'&&$page != 'reset')
+				if($page != 'index'&& $page != 'signup'&& $page != 'forgot' && $page != 'reset')
 				include(TEMPLATE_PATH.'sidebar.php');
 				
 				include(TEMPLATE_PATH.$page.'.php');
 				
-				if($page != 'index' && $page != 'signup'&&$page != 'forgot'&&$page != 'reset')
+
+				if($page != 'index' && $page != 'signup'&& $page != 'forgot' && $page != 'reset')
 				include(TEMPLATE_PATH.'footer.php');
 		?>
 	</body>

@@ -18,7 +18,8 @@ if(isset($_POST['submit']) && isset($_GET['id']))
 	elseif(isset($_POST['old_image']))
 		$image = $_POST['old_image'];
 	
-	$sqlobj->query("update pages set title='$title', description='$description', image='$image' where id=".$_GET['id']);
+	
+	$sqlobj->query("update pages set title='$title', description='$description', image='$image',status='$status' where id=".$_GET['id']);
 	
 	header("location:pages.php");
 

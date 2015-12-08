@@ -15,28 +15,28 @@
                   <div class="col-lg-12">
                       <section class="panel">
                           <header class="panel-heading">
-                             <?php echo isset($pages) ? 'Edit' : 'Add';?> Form 
+
+                             <?php echo isset($pages) ? 'Edit' : 'Add';?> Page
                           </header>
                           <div class="panel-body">
-                              <form class="form-horizontal " method="post" enctype="multipart/form-data">
+                              <form class="form-horizontal " method="post" enctype="multipart/form-data" id="page-form">
                                   
                                   <div class="form-group">
                                       <label class="col-sm-2 control-label">Title</label>
-                                      <div class="col-sm-10">
-                                          <input type="text" name="title" value="<?php echo isset($pages) ? $pages['title'] : '';?>" class="form-control" placeholder="placeholder">
+                                      <div class="col-sm-8">
+                                          <input type="text" required id="title" name="title" value="<?php echo isset($pages) ? $pages['title'] : '';?>" class="form-control" >
                                       </div>
                                   </div>
-								  
 								  <div class="form-group">
-                                      <label class="col-sm-2 control-label">Description</label>
-                                      <div class="col-sm-10">
-                                          <input type="text" name="description" value="<?php echo isset($pages) ? $pages['description'] : '';?>" class="form-control" placeholder="placeholder">
-                                      </div>
-                                  </div>
-								  
+                                                  <label class="control-label col-sm-2">Description</label>
+                                                  <div class="col-sm-8">
+                                                      <textarea required class="form-control ckeditor"  id="description" name="description"  rows="6"><?php echo isset($pages) ? $pages['description'] : '';?></textarea>
+                                                  </div>
+                                 </div>
+                                 
 								  <div class="form-group">
                                       <label class="col-sm-2 control-label">Image</label>
-                                      <div class="col-sm-10">
+                                      <div class="col-sm-8">
                                           <input type="file" name="image"  placeholder="placeholder">
 										  <?php if(isset($pages) && !empty($pages['image'])) {?>
 											<img src="<?php echo BASE_URL.'uploads/'.$pages['image']?>" width="50" height="50">
@@ -46,11 +46,11 @@
                                   </div>
 								  <div class="form-group">
                                       <label class="col-sm-2 control-label">Status</label>
-                                      <div class="col-sm-10">
-                                          <select name="status"  class="form-control" placeholder="placeholder">
-										  <option >select</option>
-										  <option value="1">yes</option>
-										  <option value="0">no</option>
+                                      <div class="col-lg-2">
+                                          <select required  name="status" id="status" class="form-control" >
+										  <option>select</option>
+										  <option <?php echo isset($pages) && $pages['status']=='yes' ? 'selected' : '';?> value="yes">yes</option>
+										  <option <?php echo isset($pages) && $pages['status']=='no' ? 'selected' : '';?> value="no">no</option>
 										  </select>
                                       </div>
                                   </div>
