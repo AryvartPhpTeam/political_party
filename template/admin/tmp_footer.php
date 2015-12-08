@@ -25,7 +25,9 @@
     <!-- custom select -->
     <script src="<?php echo JS;?>jquery.customSelect.min.js" ></script>
 	<script src="<?php echo ASSETS;?>chart-master/Chart.js"></script>
-   
+	<!-- ck editor -->
+       <script type="text/javascript" src="<?php echo ASSETS;?>ckeditor/ckeditor.js"></script>
+
     <!--custome script for all page-->
     <script src="<?php echo JS;?>scripts.js"></script>
     <!-- custom script for this page-->
@@ -92,4 +94,4 @@
 
 
   </script>
- 
+  

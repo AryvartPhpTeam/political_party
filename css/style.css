@@ -133,11 +133,14 @@ table tr th { color: #688a7e;}
 .login-form .checkbox {
     margin-bottom: 14px;
 }
+.checkbox { width:13px; height:13px; vertical-align:top; position:relative; top:2px; }
 .login-form .checkbox {
     font-weight: normal;    
     font-weight: 300;
     font-family: 'Lato', sans-serif;
+	
 }
+.alignright { float:right; display:inline; }
 .login-form .form-control {
     position: relative;
     font-size: 16px;

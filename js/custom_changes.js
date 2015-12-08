@@ -96,6 +96,7 @@ $(document).ready(function() {
                 
 	});
 
+
 	
 	$("#events_form").validate({
 		rules: {
@@ -133,6 +134,10 @@ $(document).ready(function() {
 	
 });
 
+
+	$("#page-form").validate();
+	
+
 	$('#check').click(function(event) { 
 			if($(this).is(":checked")) {
 				$('.checkbox').each(function(){
@@ -145,4 +150,6 @@ $(document).ready(function() {
 				});
 			}	
         });   
+
+
 });
