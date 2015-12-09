@@ -1,17 +1,19 @@
 $(document).ready(function() {
-
-
+	
  $(function(){
         window.prettyPrint && prettyPrint();
-        $('#dp1').datetimepicker({
+        $('#dp1').datepicker({
             format: 'mm-dd-yyyy'
         });
-        $('#dp2').datetimepicker();
+        $('#dp2').datepicker({
+            format: 'mm-dd-yyyy',
+			maxDate:0
+        });
         $('#dp3').datepicker();
         $('#dp3').datepicker();
         $('#dpYears').datepicker();
         $('#dpMonths').datepicker();
-		$('#tp1').timepicker();
+
 
         var startDate = new Date(2012,1,20);
         var endDate = new Date(2012,1,25);
@@ -55,15 +57,14 @@ $(document).ready(function() {
                 checkin.hide();
                 $('#dpd2')[0].focus();
             }).data('datepicker');
-        var checkout = $('#dpd2').datetimepicker({
+        var checkout = $('#dpd2').datepicker({
             onRender: function(date) {
                 return date.valueOf() <= checkin.date.valueOf() ? 'disabled' : '';
             }
         }).on('changeDate', function(ev) {
                 checkout.hide();
-            }).data('datetimepicker');
+            }).data('datepicker');
     });
-
 	$("#forgot_form").validate({
 		rules: {
 			email: {
@@ -217,7 +218,7 @@ $(document).ready(function() {
                     required: "Please upload a valid image."
                 }
 		}
-                
+            
 	});
 	    $("#blog_category_form").validate({
 
@@ -239,6 +240,32 @@ $(document).ready(function() {
 		}
                 
 	});
+	
+});
+$("#leader_form").validate({
+		rules: {
+		    leadertitle: "required",
+			position: "required",
+			dp1:"required",
+			age:"required",
+			dob:"required",
+			nativeplace:"required",
+			status:"required",
+			summary:"required",
+		},
+		messages:{
+			leadertitle: "This field is required",
+			position:"This field is required",
+			dp1:"This field is required",
+			dob:"This field is required",
+			nativeplace:"This field is required",
+			status:"required",
+			summary:"This field is required",
+		},
+                
+	
+	
+});
 
 	$("#page-form").validate();
 	$("#slider_form").validate({
