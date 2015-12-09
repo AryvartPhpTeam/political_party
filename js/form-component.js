@@ -53,44 +53,17 @@ var Script = function () {
         };
     };
 
-
-
-    $(function() {
-
-        // Tags Input
-        $(".tagsinput").tagsInput();
-
-        // Switch
-        $("[data-toggle='switch']").wrap('<div class="switch" />').parent().bootstrapSwitch();
-
-    });
-
-
-
-    //color picker
-
-    $('.cp1').colorpicker({
-        format: 'hex'
-    });
-    $('.cp2').colorpicker();
-
-
-    //date picker
-
-    if (top.location != location) {
-        top.location.href = document.location.href ;
-    }
-    $(function(){
+ $(function(){
         window.prettyPrint && prettyPrint();
-        $('#dp1').datepicker({
+        $('#dp1').datetimepicker({
             format: 'mm-dd-yyyy'
         });
-        $('#dp2').datepicker();
+        $('#dp2').datetimepicker();
         $('#dp3').datepicker();
         $('#dp3').datepicker();
         $('#dpYears').datepicker();
         $('#dpMonths').datepicker();
-
+		$('#tp1').timepicker();
 
         var startDate = new Date(2012,1,20);
         var endDate = new Date(2012,1,25);
@@ -134,14 +107,41 @@ var Script = function () {
                 checkin.hide();
                 $('#dpd2')[0].focus();
             }).data('datepicker');
-        var checkout = $('#dpd2').datepicker({
+        var checkout = $('#dpd2').datetimepicker({
             onRender: function(date) {
                 return date.valueOf() <= checkin.date.valueOf() ? 'disabled' : '';
             }
         }).on('changeDate', function(ev) {
                 checkout.hide();
-            }).data('datepicker');
+            }).data('datetimepicker');
     });
+
+    $(function() {
+
+        // Tags Input
+        $(".tagsinput").tagsInput();
+
+        // Switch
+        $("[data-toggle='switch']").wrap('<div class="switch" />').parent().bootstrapSwitch();
+
+    });
+
+
+
+    //color picker
+
+   // $('.cp1').colorpicker({
+      //  format: 'hex'
+   // });
+   // $('.cp2').colorpicker();
+
+
+    //date picker
+
+    if (top.location != location) {
+        top.location.href = document.location.href ;
+    }
+   
 
 
 

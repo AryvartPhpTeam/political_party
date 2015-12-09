@@ -20,7 +20,7 @@
                              <?php echo isset($news) ? 'Edit' : 'Add';?> Form 
                           </header>
                           <div class="panel-body">
-                              <form class="form-horizontal " method="post" enctype="multipart/form-data">
+                              <form class="form-horizontal " method="post" enctype="multipart/form-data" id="events_form">
                                   
                                   <div class="form-group">
                                       <label class="col-sm-2 control-label">Title</label>

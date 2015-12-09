@@ -1,5 +1,69 @@
 $(document).ready(function() {
 
+
+ $(function(){
+        window.prettyPrint && prettyPrint();
+        $('#dp1').datetimepicker({
+            format: 'mm-dd-yyyy'
+        });
+        $('#dp2').datetimepicker();
+        $('#dp3').datepicker();
+        $('#dp3').datepicker();
+        $('#dpYears').datepicker();
+        $('#dpMonths').datepicker();
+		$('#tp1').timepicker();
+
+        var startDate = new Date(2012,1,20);
+        var endDate = new Date(2012,1,25);
+        $('#dp4').datepicker()
+            .on('changeDate', function(ev){
+                if (ev.date.valueOf() > endDate.valueOf()){
+                    $('#alert').show().find('strong').text('The start date can not be greater then the end date');
+                } else {
+                    $('#alert').hide();
+                    startDate = new Date(ev.date);
+                    $('#startDate').text($('#dp4').data('date'));
+                }
+                $('#dp4').datepicker('hide');
+            });
+        $('#dp5').datepicker()
+            .on('changeDate', function(ev){
+                if (ev.date.valueOf() < startDate.valueOf()){
+                    $('#alert').show().find('strong').text('The end date can not be less then the start date');
+                } else {
+                    $('#alert').hide();
+                    endDate = new Date(ev.date);
+                    $('#endDate').text($('#dp5').data('date'));
+                }
+                $('#dp5').datepicker('hide');
+            });
+
+        // disabling dates
+        var nowTemp = new Date();
+        var now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate(), 0, 0, 0, 0);
+
+        var checkin = $('#dpd1').datepicker({
+            onRender: function(date) {
+                return date.valueOf() < now.valueOf() ? 'disabled' : '';
+            }
+        }).on('changeDate', function(ev) {
+                if (ev.date.valueOf() > checkout.date.valueOf()) {
+                    var newDate = new Date(ev.date)
+                    newDate.setDate(newDate.getDate() + 1);
+                    checkout.setValue(newDate);
+                }
+                checkin.hide();
+                $('#dpd2')[0].focus();
+            }).data('datepicker');
+        var checkout = $('#dpd2').datetimepicker({
+            onRender: function(date) {
+                return date.valueOf() <= checkin.date.valueOf() ? 'disabled' : '';
+            }
+        }).on('changeDate', function(ev) {
+                checkout.hide();
+            }).data('datetimepicker');
+    });
+
 	$("#forgot_form").validate({
 		rules: {
 			email: {
@@ -96,14 +160,13 @@ $(document).ready(function() {
                 
 	});
 
-
 	
 	$("#events_form").validate({
 		rules: {
 		    eventtitle: "required",
 			description: "required",
-			startdateandtime:"required",
-			enddateandtime:"required",
+			dp1:"required",
+			dp2:"required",
 			location:"required",
 			status:"required",
 			image:"required",
@@ -112,21 +175,26 @@ $(document).ready(function() {
 			noofparticipant:"required",
 			eventwebsite: {
                     required: true,
-                    eventwebsite: true
+                    url: true
                 },
-			
+			eventcontact:{
+			required:true,
+			minlength:10,
+			maxlength:10,
+			number:true
+			},
 		},
 		messages:{
 			eventtitle: "Please enter your name",
 			description:"please enter your description",
-			startdateandtime:"please enter your start date and time",
-			enddateandtime:"please enter your end date and time",
+			dp1:"please enter your start date and time",
+			dp2:"please enter your end date and time",
 			location:"please enter your location",
-			status:"please enter your status",
+			status:"please select your status",
 			eventhead:"please enter your event head",
 			eventcontact:"please enter your event contact",
 			noofparticipant:"please enter your no of participant",
-			eventwebsite: "Please enter a valid email address.",
+			eventwebsite: "Please enter a valid website.",
 			image:"please choose your image",
 		}
                 
@@ -134,9 +202,30 @@ $(document).ready(function() {
 	
 });
 
-
 	$("#page-form").validate();
 	
+$("#eventgallery_form").validate({
+		rules: {
+			event_title: {
+                    required: true
+                    
+                },
+			image: {
+                    required: true
+                    
+                }
+                
+		},
+		messages:{
+			event_title: "Please select a title name.",
+			image: {
+                    required: "Please upload a valid image."
+                    
+                }
+            
+		}
+                
+	});
 
 	$('#check').click(function(event) { 
 			if($(this).is(":checked")) {
@@ -149,7 +238,7 @@ $(document).ready(function() {
 					$(this).prop("checked",false);
 				});
 			}	
-        });   
 
+        });   
 
 });

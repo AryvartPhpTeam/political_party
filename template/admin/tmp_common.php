@@ -12,12 +12,14 @@
 
     <!-- Bootstrap CSS -->    
     <link href="<?php echo CSS;?>bootstrap.min.css" rel="stylesheet">
+	
     <!-- bootstrap theme -->
     <link href="<?php echo CSS;?>bootstrap-theme.css" rel="stylesheet">
     <!--external css-->
     <!-- font icon -->
     <link href="<?php echo CSS;?>elegant-icons-style.css" rel="stylesheet" />
     <link href="<?php echo CSS;?>font-awesome.css" rel="stylesheet" />
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
     <!-- Custom styles -->
     <link href="<?php echo CSS;?>style.css" rel="stylesheet">
     <link href="<?php echo CSS;?>style-responsive.css" rel="stylesheet" />

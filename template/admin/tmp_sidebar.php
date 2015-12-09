@@ -18,6 +18,7 @@
                       <ul class="sub">
                           <li><a class="" href="<?php echo BASE_URL.'admin/add_news.php'?>">Add News</a></li>                          
                           <li><a class="" href="<?php echo BASE_URL.'admin/news.php'?>">News Management</a></li>
+						  
                       </ul>
                   </li>      
 				  <li class="sub-menu">
@@ -43,7 +44,21 @@
                           <li><a class="" href="<?php echo BASE_URL.'admin/slider.php'?>">Slider Management</a></li>
                       </ul>
                   </li> 
-			  </ul>
+			  					  
+                  </li>  
+					<li class="sub-menu">
+                      <a href="javascript:;" class="">
+                          <i class="icon_document_alt"></i>
+                          <span>Events</span>
+                          <span class="menu-arrow arrow_carrot-right"></span>
+                      </a>
+                     <ul class="sub">
+						  <li><a class="" href="<?php echo BASE_URL.'admin/events.php'?>">Add Events</a></li>
+						  <li><a class="" href="<?php echo BASE_URL.'admin/events_management.php'?>">Events Management</a></li>
+					  </ul>
+					  
+                  </li>   
+              </ul>
               <!-- sidebar menu end-->
           </div>
       </aside>
