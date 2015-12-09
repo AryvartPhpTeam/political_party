@@ -226,7 +226,7 @@
                                 <img alt="" src="img/avatar1_small.jpg">
                             </span>
 
-						<span class="username"><?php echo $_SESSION['user']['username']; ?></span>
+							<span class="username"><?php echo $_SESSION['user']['username']; ?></span>
 
                             <b class="caret"></b>
                         </a>
