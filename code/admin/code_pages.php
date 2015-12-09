@@ -11,11 +11,7 @@ if(isset($_GET['delete']) && !empty($_GET['delete']))
 	header("location:pages.php");
 	exit;
 }
-
-
-$pages_res = $sqlobj->query("select * from pages");
-
- if(isset($_POST['submit']) && isset($_POST["bulk"] ))
+if(isset($_POST['submit']) && isset($_POST["bulk"] ))
 	{						    
 		$chek=$_POST["bulk"];
 		$chk=implode(",",$_POST["check"]);
@@ -30,7 +26,8 @@ $pages_res = $sqlobj->query("select * from pages");
 			header("location:pages.php");	
 		}
 	}	
-
+$per_page = 10;
+$pages_res = $ownobj->getpageresults('pages', $per_page);
 
 if(file_exists(TEMPLATE_PATH.$page.'.php'))
 	include(TEMPLATE_PATH.'common.php');

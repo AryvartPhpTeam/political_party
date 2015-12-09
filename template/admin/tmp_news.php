@@ -50,6 +50,7 @@
                                <?php }?>                            
                            </tbody>
                         </table>
+						<?php echo $ownobj->getpagination('news', $page, $per_page);?>
                       </section>
                   </div>
               </div>

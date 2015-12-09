@@ -11,7 +11,7 @@ if(isset($_GET['delete']) && !empty($_GET['delete']))
 	header("location:slider.php");
 	exit;
 }
-$slider_res = $sqlobj->query("select * from slider");
+
 if(isset($_POST['submit']) && isset($_POST["data"] ))
 	{						    
 		$chek=$_POST["data"];
@@ -32,6 +32,8 @@ if(isset($_POST['submit']) && isset($_POST["data"] ))
 			header("location:slider.php");	
 		}
 	}
+$per_page = 10;
+$slider_res = $ownobj->getpageresults('slider', $per_page);
 
 if(file_exists(TEMPLATE_PATH.$page.'.php'))
 	include(TEMPLATE_PATH.'common.php');

@@ -241,6 +241,21 @@ $(document).ready(function() {
 	});
 
 	$("#page-form").validate();
+	$("#slider_form").validate({
+		rules: {
+		  		link: {
+                    required: true,
+                    url: true
+                },
+			
+		},
+		messages:{
+			
+			link: "Please enter valid URL eg:https://www.google.co.in/."
+			
+		}
+                
+	});
 	
 $("#eventgallery_form").validate({
 		rules: {
