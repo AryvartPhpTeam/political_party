@@ -197,10 +197,28 @@ $(document).ready(function() {
 			eventwebsite: "Please enter a valid website.",
 			image:"please choose your image",
 		}
+        
+    });
+    $("#eventgallery_form").validate({
+
+		rules: {
+			event_title: {
+                    required: true
+                    
+                },
+			image: {
+                    required: true
+                }
+               
+		},
+		messages:{
+			event_title: "Please select a title name.",
+			image: {
+                    required: "Please upload a valid image."
+                }
+		}
                 
-	
-	
-});
+	});
 
 	$("#page-form").validate();
 	
@@ -227,6 +245,9 @@ $("#eventgallery_form").validate({
                 
 	});
 
+    
+
+
 	$('#check').click(function(event) { 
 			if($(this).is(":checked")) {
 				$('.checkbox').each(function(){
@@ -238,7 +259,15 @@ $("#eventgallery_form").validate({
 					$(this).prop("checked",false);
 				});
 			}	
+    }); 
+	
 
-        });   
+	$(document).on('click', ".addfield", function(){
+		$(this).parent().after($("#backup").html());
+	});
+	$(document).on('click', ".removefield", function(){
+		$(this).parent().remove();
+	});
+
 
 });
