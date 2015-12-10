@@ -8,7 +8,6 @@ if(!isset($_SESSION['user']))
 if(isset($_POST['submit']))
 {
 	$event_title = $_POST['event_title'];
-	$title = $_POST['title'];
 	$image = '';
 	for($i=0;$i<count($_FILES['image']['name']);$i++)
     {	
@@ -19,7 +18,7 @@ if(isset($_POST['submit']))
 	}
 	
 	$sqlobj->query("insert into event_gallery(event_id,image) values('$event_title','$image')");
-	}exit;
+	}
 	header("location:event_gallery.php");
 }
 
