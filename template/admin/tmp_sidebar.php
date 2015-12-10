@@ -68,7 +68,18 @@
 						  <li><a class="" href="<?php echo BASE_URL.'admin/event_gallery.php'?>">Event Gallery</a></li>
 					  </ul>
 					  
-                  </li>   
+                  </li> 
+				<li class="sub-menu">
+                      <a href="javascript:;" class="">
+                          <i class="icon_document_alt"></i>
+                          <span>Leaders</span>
+                          <span class="menu-arrow arrow_carrot-right"></span>
+                      </a>
+                     <ul class="sub">
+						  <li><a class="" href="<?php echo BASE_URL.'admin/leaders.php'?>">Add Leaders</a></li>
+						  <li><a class="" href="<?php echo BASE_URL.'admin/leaders_management.php'?>">Leaders Management</a></li>
+					  </ul>
+					</li>   		
               </ul>
               <!-- sidebar menu end-->
           </div>

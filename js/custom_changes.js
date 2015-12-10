@@ -1,6 +1,5 @@
 $(document).ready(function() {
-
-
+	
  $(function(){
         window.prettyPrint && prettyPrint();
         $('#dp1').datetimepicker({
@@ -8,10 +7,14 @@ $(document).ready(function() {
         });
         $('#dp2').datetimepicker();
         $('#dp3').datepicker();
-        $('#dp3').datepicker();
+        $('#dp4').datepicker(
+		{
+            format: 'mm-dd-yyyy',
+			maxDate:0
+        });
         $('#dpYears').datepicker();
         $('#dpMonths').datepicker();
-		$('#tp1').timepicker();
+
 
         var startDate = new Date(2012,1,20);
         var endDate = new Date(2012,1,25);
@@ -63,7 +66,6 @@ $(document).ready(function() {
                 checkout.hide();
             }).data('datetimepicker');
     });
-
 	$("#forgot_form").validate({
 		rules: {
 			email: {
@@ -165,8 +167,8 @@ $(document).ready(function() {
 		rules: {
 		    eventtitle: "required",
 			description: "required",
-			dp1:"required",
-			dp2:"required",
+			dp3:"required",
+			dp4:"required",
 			location:"required",
 			status:"required",
 			image:"required",
@@ -187,8 +189,8 @@ $(document).ready(function() {
 		messages:{
 			eventtitle: "Please enter your name",
 			description:"please enter your description",
-			dp1:"please enter your start date and time",
-			dp2:"please enter your end date and time",
+			dp3:"please enter your start date and time",
+			dp4:"please enter your end date and time",
 			location:"please enter your location",
 			status:"please select your status",
 			eventhead:"please enter your event head",
@@ -217,7 +219,7 @@ $(document).ready(function() {
                     required: "Please upload a valid image."
                 }
 		}
-                
+            
 	});
 	    $("#blog_category_form").validate({
 
@@ -239,6 +241,32 @@ $(document).ready(function() {
 		}
                 
 	});
+	
+});
+$("#leader_form").validate({
+		rules: {
+		    leadertitle: "required",
+			position: "required",
+			dp1:"required",
+			age:"required",
+			dob:"required",
+			nativeplace:"required",
+			status:"required",
+			summary:"required",
+		},
+		messages:{
+			leadertitle: "This field is required",
+			position:"This field is required",
+			dp1:"This field is required",
+			dob:"This field is required",
+			nativeplace:"This field is required",
+			status:"required",
+			summary:"This field is required",
+		},
+                
+	
+	
+});
 
 	$("#page-form").validate();
 	$("#slider_form").validate({
