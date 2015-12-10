@@ -41,7 +41,7 @@
                                  <th><i class=""></i>Image</th>
 								 <th><i class=""></i>Status</th>
 								 <th><i class=""></i>Author</th>
-                                 <th><i class=""></i> Action</th>
+                                 <th><i class="icon_cogs"></i> Action</th>
                             </tr>
                               <?php foreach($pages_res as $res){?>
 							<tr>

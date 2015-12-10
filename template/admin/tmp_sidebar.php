@@ -68,6 +68,7 @@
 						  <li><a class="" href="<?php echo BASE_URL.'admin/events.php'?>">Add Events</a></li>
 						  <li><a class="" href="<?php echo BASE_URL.'admin/events_management.php'?>">Events Management</a></li>
 						  <li><a class="" href="<?php echo BASE_URL.'admin/event_gallery.php'?>">Event Gallery</a></li>
+						  <li><a class="" href="<?php echo BASE_URL.'admin/event_gallery_management.php'?>">Gallery Management</a></li>
 					  </ul>
 					  
                   </li> 

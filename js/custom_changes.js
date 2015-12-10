@@ -1,6 +1,6 @@
 $(document).ready(function() {
-	
- $(function(){
+ 
+    $(function(){
         window.prettyPrint && prettyPrint();
         $('#dp1').datetimepicker({
             format: 'mm-dd-yyyy'
@@ -171,7 +171,6 @@ $(document).ready(function() {
 			dp4:"required",
 			location:"required",
 			status:"required",
-			image:"required",
 			eventhead:"required",
 			eventcontact:"required",
 			noofparticipant:"required",
@@ -196,32 +195,11 @@ $(document).ready(function() {
 			eventhead:"please enter your event head",
 			eventcontact:"please enter your event contact",
 			noofparticipant:"please enter your no of participant",
-			eventwebsite: "Please enter a valid website.",
-			image:"please choose your image",
+			eventwebsite: "Please enter a valid website."
 		}
         
     });
-    $("#eventgallery_form").validate({
-
-		rules: {
-			event_title: {
-                    required: true
-                    
-                },
-			image: {
-                    required: true
-                }
-               
-		},
-		messages:{
-			event_title: "Please select a title name.",
-			image: {
-                    required: "Please upload a valid image."
-                }
-		}
-            
-	});
-	    $("#blog_category_form").validate({
+    $("#blog_category_form").validate({
 
 		rules: {
 			category_name: {
@@ -239,7 +217,19 @@ $(document).ready(function() {
                     required: "Please select a status."
                 }
 		}
-                
+            
+	});
+
+	$("#news_form").validate({
+	rules: {
+			title: {
+                    required: true
+                    
+                },
+		},
+		messages:{
+			title: "Please select a title name.",
+		}
 	});
 	
 });
@@ -285,24 +275,15 @@ $("#leader_form").validate({
                 
 	});
 	
-$("#eventgallery_form").validate({
+    $("#eventgallery_form").validate({
 		rules: {
 			event_title: {
                     required: true
                     
                 },
-			image: {
-                    required: true
-                    
-                }
-                
 		},
 		messages:{
 			event_title: "Please select a title name.",
-			image: {
-                    required: "Please upload a valid image."
-                    
-                }
             
 		}
                 
@@ -324,7 +305,20 @@ $("#eventgallery_form").validate({
 		}
         
     });
-
+    $("#page_form").validate({
+		rules: {
+		    title: "required",
+			description: "required",
+			status:"required"
+			},
+	
+		messages:{
+			title: "Please enter your title name",
+			description:"please enter your description",
+			status:"please select your status."
+		}
+        
+    });
 
 	$('#check').click(function(event) { 
 			if($(this).is(":checked")) {

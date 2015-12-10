@@ -37,6 +37,7 @@
 			  </select>
            
             <button name="submit" class="btn btn-primary btn-lg btn-block" type="submit">Save</button>
+			<a href="<?php echo BASE_URL.'admin/index.php'?>" class="btn btn-info btn-lg btn-block" type="submit" >Login</a>
             <input class="btn btn-info btn-lg btn-block" type="reset" value="Cancel">
         </div>
       </form>

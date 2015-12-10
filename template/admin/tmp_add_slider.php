@@ -21,25 +21,31 @@
                           </header>
                           <div class="panel-body">
                               <form class="form-horizontal " method="post" enctype="multipart/form-data" id="slider_form">
-                                  
+                                 
                                   <div class="form-group">
                                       <label class="col-sm-2 control-label">Title</label>
                                       <div class="col-sm-10">
+
                                           <input type="text" name="title" id="title" required value="<?php echo isset($slider) ? $slider['title'] : '';?>" class="form-control" >
+
                                       </div>
                                   </div>
 								  
 								  <div class="form-group">
                                       <label class="col-sm-2 control-label">Link</label>
                                       <div class="col-sm-10">
+
                                           <input type="text" name="link" id="link" required value="<?php echo isset($slider) ? $slider['link'] : '';?>" class="form-control" >
+
                                       </div>
                                   </div>
 								  
 								  <div class="form-group">
                                       <label class="col-sm-2 control-label">Image</label>
                                       <div class="col-sm-10">
+
                                           <input type="file" name="image" id="image" required placeholder="upload images">
+
 										  <?php if(isset($slider) && !empty($slider['image'])) {?>
 											<img src="<?php echo BASE_URL.'uploads/'.$slider['image']?>" width="50" height="50">
 											<input type="hidden" name="old_image" value="<?php echo $slider['image'];?>">

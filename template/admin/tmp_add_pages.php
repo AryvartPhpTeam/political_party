@@ -19,7 +19,7 @@
                              <?php echo isset($pages) ? 'Edit' : 'Add';?> Page
                           </header>
                           <div class="panel-body">
-                              <form class="form-horizontal " method="post" enctype="multipart/form-data" id="page-form">
+                              <form class="form-horizontal " method="post" enctype="multipart/form-data" id="page_form">
                                   
                                   <div class="form-group">
                                       <label class="col-sm-2 control-label">Title</label>
@@ -37,18 +37,18 @@
 								  <div class="form-group">
                                       <label class="col-sm-2 control-label">Image</label>
                                       <div class="col-sm-8">
-                                          <input type="file" name="image"  placeholder="placeholder">
+                                          <input type="file" name="image" <?php if(!isset($pages)){ ?> required <?php } ?>placeholder="placeholder">
 										  <?php if(isset($pages) && !empty($pages['image'])) {?>
 											<img src="<?php echo BASE_URL.'uploads/'.$pages['image']?>" width="50" height="50">
-											<input type="hidden" name="old_image" value="<?php echo $pages['image'];?>">
+											<input  type="hidden" name="old_image" value="<?php echo $pages['image'];?>">
 										  <?php }?>
                                       </div>
                                   </div>
 								  <div class="form-group">
                                       <label class="col-sm-2 control-label">Status</label>
-                                      <div class="col-lg-2">
-                                          <select required  name="status" id="status" class="form-control" >
-										  <option>select</option>
+                                      <div class="col-lg-8">
+                                          <select   name="status"  class="form-control" >
+										  <option value="" required>select</option>
 										  <option <?php echo isset($pages) && $pages['status']=='yes' ? 'selected' : '';?> value="yes">yes</option>
 										  <option <?php echo isset($pages) && $pages['status']=='no' ? 'selected' : '';?> value="no">no</option>
 										  </select>

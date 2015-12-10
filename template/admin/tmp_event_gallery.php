@@ -27,7 +27,7 @@
 										 <select name="event_title"  class="form-control" placeholder="placeholder">
 										 <option required value="" id="event_title">select</option>
 										 <?php foreach($event_res as $res){ ?>
-										  <option value="<?php echo $res['id']; ?>" ><?php echo $res['event_title']; ?></option>
+										  <option <?php echo isset($manage) && $manage['event_id']==$res['id'] ? 'selected' : '';?> value="<?php echo $res['id']; ?>" ><?php echo $res['event_title']; ?></option>
 										  <?php } ?>
 										   </select>
 										
@@ -37,10 +37,15 @@
 								  <div class="form-group">
                                       <label class="col-sm-2 control-label">Image</label>
                                       <div class="col-sm-4">
-                                          <input required type="file" name="image[]" id="image">
-										  
+                                          <input type="file" name="image[]" <?php if(!isset($manage)){ ?> required <?php } ?>placeholder="placeholder">
+										  <?php if(isset($manage) && !empty($manage['image'])) {?>
+											<img src="<?php echo BASE_URL.'uploads/'.$manage['image']?>" width="50" height="50">
+											<input  type="hidden" name="old_image" value="<?php echo $manage['image'];?>">
+										  <?php }?>
 									  </div>
+									  <?php if(!isset($manage)){ ?>  
 									<input type="button" name="btn" value="Add" class="addfield">
+									<?php } ?>
 								 </div>
 								 <button class="btn btn-primary" name="submit" type="submit">Submit</button>
                              </form>
