@@ -69,6 +69,7 @@
                            </tbody>
                         </table>
 						</form>
+						<?php echo $ownobj->getpagination('events', $page, $per_page);?>
                       </section>
                   </div>
               </div>

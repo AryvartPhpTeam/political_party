@@ -30,7 +30,10 @@ if(isset($_POST["submit"])&& isset($_POST["select"]))
 		$sqlobj->query("UPDATE events SET status='no' WHERE id IN ($cheked)");
 		header("location:events_management.php");
 		}
-}		
+}	
+$per_page = 10;
+$slider_res = $ownobj->getpageresults('slider', $per_page);
+	
 if(file_exists(TEMPLATE_PATH.$page.'.php'))
 	include(TEMPLATE_PATH.'common.php');
 else

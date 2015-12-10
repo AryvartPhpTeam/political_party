@@ -11,8 +11,9 @@ if(isset($_GET['delete']) && !empty($_GET['delete']))
 	header("location:news.php");
 	exit;
 }
+$per_page = 10;
+$news_res = $ownobj->getpageresults('news', $per_page);
 
-$news_res = $sqlobj->query("select * from news");
 
 if(file_exists(TEMPLATE_PATH.$page.'.php'))
 	include(TEMPLATE_PATH.'common.php');

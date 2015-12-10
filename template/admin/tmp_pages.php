@@ -63,6 +63,7 @@
                            </tbody>
                         </table>
 					</form>
+					<?php echo $ownobj->getpagination('pages', $page, $per_page);?>
                    </section>
 					
                   </div>

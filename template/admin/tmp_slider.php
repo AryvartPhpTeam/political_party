@@ -64,8 +64,12 @@
                            </tbody>
                         </table>
 					</form>
-                      </section>
-					
+                      
+					  <?php echo $ownobj->getpagination('slider', $page, $per_page);?>
+					  </section>
+						
+						
+						
                   </div>
               </div>
                           </div>
