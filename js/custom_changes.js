@@ -219,6 +219,26 @@ $(document).ready(function() {
 		}
                 
 	});
+	    $("#blog_category_form").validate({
+
+		rules: {
+			category_name: {
+                    required: true
+                    
+                },
+			status: {
+                    required: true
+                }
+               
+		},
+		messages:{
+			category_name: "Please enter a valid name.",
+			status: {
+                    required: "Please select a status."
+                }
+		}
+                
+	});
 
 	$("#page-form").validate();
 	
@@ -245,7 +265,22 @@ $("#eventgallery_form").validate({
                 
 	});
 
-    
+    $("#blog_form").validate({
+		rules: {
+		    title: "required",
+			category:"required",
+			description: "required",
+			status:"required",
+			},
+	
+		messages:{
+			title: "Please enter your title name",
+			category:"please select your category",
+			description:"please enter your description",
+			status:"please select your status",
+		}
+        
+    });
 
 
 	$('#check').click(function(event) { 
