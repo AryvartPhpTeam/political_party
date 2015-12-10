@@ -38,7 +38,7 @@
 								     <div class="form-group">
                                               <label class="col-sm-2 control-label">Join Date</label>
                                               <div class="col-sm-10">
-                                              <input required id="dp1" type="text" name="joindate" value="<?php echo isset($lead) ? $lead['join_date'] : '';?>"  class="form-control">
+                                              <input required id="dp3" type="text" name="joindate" value="<?php echo isset($lead) ? $lead['join_date'] : '';?>"  class="form-control">
                                             </div>
 										 </div>
 										 
@@ -51,7 +51,7 @@
 								  <div class="form-group">
                                       <label class="col-sm-2 control-label">Date Of Birth</label>
                                       <div class="col-sm-10">
-                                          <input id="dp2" type="text" required name="dob" value="<?php echo isset($lead) ? $lead['date_of_birth'] : '';?>" id="dob" class="form-control" >
+                                          <input id="dp4" type="text" required name="dob" value="<?php echo isset($lead) ? $lead['date_of_birth'] : '';?>" id="dob" class="form-control" >
                                       </div>
                                   </div>
 								  <div class="form-group">

@@ -2,15 +2,16 @@ $(document).ready(function() {
 	
  $(function(){
         window.prettyPrint && prettyPrint();
-        $('#dp1').datepicker({
+        $('#dp1').datetimepicker({
             format: 'mm-dd-yyyy'
         });
-        $('#dp2').datepicker({
+        $('#dp2').datetimepicker();
+        $('#dp3').datepicker();
+        $('#dp4').datepicker(
+		{
             format: 'mm-dd-yyyy',
 			maxDate:0
         });
-        $('#dp3').datepicker();
-        $('#dp3').datepicker();
         $('#dpYears').datepicker();
         $('#dpMonths').datepicker();
 
@@ -57,13 +58,13 @@ $(document).ready(function() {
                 checkin.hide();
                 $('#dpd2')[0].focus();
             }).data('datepicker');
-        var checkout = $('#dpd2').datepicker({
+        var checkout = $('#dpd2').datetimepicker({
             onRender: function(date) {
                 return date.valueOf() <= checkin.date.valueOf() ? 'disabled' : '';
             }
         }).on('changeDate', function(ev) {
                 checkout.hide();
-            }).data('datepicker');
+            }).data('datetimepicker');
     });
 	$("#forgot_form").validate({
 		rules: {
@@ -166,8 +167,8 @@ $(document).ready(function() {
 		rules: {
 		    eventtitle: "required",
 			description: "required",
-			dp1:"required",
-			dp2:"required",
+			dp3:"required",
+			dp4:"required",
 			location:"required",
 			status:"required",
 			image:"required",
@@ -188,8 +189,8 @@ $(document).ready(function() {
 		messages:{
 			eventtitle: "Please enter your name",
 			description:"please enter your description",
-			dp1:"please enter your start date and time",
-			dp2:"please enter your end date and time",
+			dp3:"please enter your start date and time",
+			dp4:"please enter your end date and time",
 			location:"please enter your location",
 			status:"please select your status",
 			eventhead:"please enter your event head",
