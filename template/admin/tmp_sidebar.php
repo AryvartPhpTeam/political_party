@@ -51,8 +51,10 @@
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
                       <ul class="sub">
-                          <li><a class="" href="<?php echo BASE_URL.'admin/add_blog_category.php'?>">Add Blog Category</a></li>                          
+                          <li><a class="" href="<?php echo BASE_URL.'admin/add_blog_category.php'?>">Add Blog Category</a></li>
+                          <li><a class="" href="<?php echo BASE_URL.'admin/blog_category.php'?>">Blog Category </a></li>
                           <li><a class="" href="<?php echo BASE_URL.'admin/add_blog.php'?>">Add Blog</a></li>
+
                       </ul>
                   </li>	  
                   </li>  

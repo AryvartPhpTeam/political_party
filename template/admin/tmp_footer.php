@@ -25,17 +25,13 @@
     <!-- custom select -->
     <script src="<?php echo JS;?>jquery.customSelect.min.js" ></script>
 	<script src="<?php echo ASSETS;?>chart-master/Chart.js"></script>
-<<<<<<< HEAD
+
 	<!-- ck editor -->
        <script type="text/javascript" src="<?php echo ASSETS;?>ckeditor/ckeditor.js"></script>
-
-=======
 	<script src="<?php echo JS;?>jquery-ui-1.9.2.custom.min.js"></script>
 	<script src="<?php echo JS;?>datepicker.js"></script>
 	<script src="<?php echo JS;?>timepicker.js"></script>
 	<!--custom tagsinput-->
- 
->>>>>>> dcbe044... Fix #3 Event management
     <!--custome script for all page-->
     <script src="<?php echo JS;?>scripts.js"></script>
     <!-- custom script for this page-->
