@@ -75,7 +75,7 @@
 								  <div class="form-group">
                                       <label class="col-sm-2 control-label">Image</label>
                                       <div class="col-sm-10">
-                                          <input type="file" name="image"  placeholder="placeholder">
+                                          <input type="file" name="image" <?php if(!isset($mang)){ ?> required <?php } ?> placeholder="placeholder">
 										  <?php if(isset($mang) && !empty($mang['image'])) {?>
 											<img src="<?php echo BASE_URL.'uploads/'.$mang['image']?>" width="50" height="50">
 											<input type="hidden" name="old_image" value="<?php echo $mang['image'];?>">

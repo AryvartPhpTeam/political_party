@@ -23,7 +23,7 @@
                       <section class="panel">
 					  <form method="post" >
                           <header class="panel-heading">
-                            <div class="navbar-form ">Advanced  Select   
+                            <div class="navbar-form ">Advanced    
 							    <select name="select" class="form-control" >
 								<option>select</option>
 								<option  value="publish">Bulk Publish</option>

@@ -5,7 +5,7 @@
 				<div class="col-lg-12">
 					<h3 class="page-header"><i class="fa fa-file-text-o"></i> News Management</h3>
 					<ol class="breadcrumb">
-						<li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
+						<li><i class="fa fa-home"></i><a href="<?php echo BASE_URL.'admin/dashboard.php'?>">Home</a></li>
 						<li><i class="icon_document_alt"></i>News</li>
 						<li><i class="fa fa-file-text-o"></i>News Management</li>
 					</ol>
@@ -15,23 +15,23 @@
                   <div class="col-lg-12">
                       <section class="panel">
                           <header class="panel-heading">
-                             Form Elements
+                            News Management
                           </header>
                           <div class="panel-body">
                               <div class="row">
                   <div class="col-lg-12">
                       <section class="panel">
                           <header class="panel-heading">
-                              Advanced Table
+                              News List 
                           </header>
                           
                           <table class="table table-striped table-advance table-hover">
                            <tbody>
                               <tr>
-                                 <th><i class="icon_profile"></i>Title</th>
-                                 <th><i class="icon_calendar"></i>Description</th>
-                                 <th><i class="icon_mail_alt"></i>Image</th>
-								 <th><i class="icon_mail_alt"></i>Author</th>
+                                 <th><i class=""></i>Title</th>
+                                 <th><i class=""></i>Description</th>
+                                 <th><i class=""></i>Image</th>
+								 <th><i class=""></i>Author</th>
                                  <th><i class="icon_cogs"></i> Action</th>
                               </tr>
                               <?php foreach($news_res as $res){?>

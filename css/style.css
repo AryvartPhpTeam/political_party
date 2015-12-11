@@ -133,7 +133,7 @@ table tr th { color: #688a7e;}
 .login-form .checkbox {
     margin-bottom: 14px;
 }
-.checkbox { width:13px; height:13px; vertical-align:top; position:relative; top:2px; }
+.checkbox { vertical-align:top; position:relative; top:2px; }
 .login-form .checkbox {
     font-weight: normal;    
     font-weight: 300;
@@ -4043,6 +4043,12 @@ ul.amounts li {
 /*form validation*/
 
 .form-validate .form-group label.error {
+    display: inline;
+    margin: 5px 0;
+    color: #F00;
+    font-weight: 400;
+}
+.form-horizontal .form-group label.error {
     display: inline;
     margin: 5px 0;
     color: #F00;
