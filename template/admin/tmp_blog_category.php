@@ -37,13 +37,15 @@
                               <tr>
 								 <th><input type="checkbox" id="check"/></th>
                                  <th><i class=""></i>Name</th>
+								 <th><i class=""></i>Post</th>
                                  <th><i class=""></i>status</th>
                                  <th><i class=""></i> Action</th>
                               </tr>
-                              <?php foreach($blog_res as $res){?>
+                              <?php foreach($blog_result as $res){?>
 							  <tr>
 								 <td><input type="checkbox" class="checkbox" name="check[]"  value="<?php echo $res['id']; ?>"/></td>
                                  <td><?php echo $res['category_name']?></td>
+								 <td><?php echo $res['post']?></td>
                                  <td><?php echo $res['status']?></td>
 								 <td>
                                   <div class="btn-group">

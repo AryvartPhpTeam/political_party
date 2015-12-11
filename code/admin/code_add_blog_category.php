@@ -19,7 +19,7 @@ elseif(isset($_POST['submit']))
 	$status = $_POST['status'];
 	$sqlobj->query("insert into blog_category(category_name,status) values('$category_name','$status')");
 	
-	header("location:blog_category.php.php");
+	header("location:blog_category.php");
 }
 
 if(isset($_GET['id']) && !empty($_GET['id']))

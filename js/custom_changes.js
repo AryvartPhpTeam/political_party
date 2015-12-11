@@ -1,7 +1,5 @@
 
 $(document).ready(function() {
- 
-    $(function(){
         window.prettyPrint && prettyPrint();
         $('#dp1').datetimepicker({
             format: 'mm-dd-yyyy'
@@ -78,6 +76,29 @@ $(document).ready(function(){
     })
 	.data('datetimepicker');
     	
+
+        var checkin = $('#dpd1').datepicker({
+            onRender: function(date) {
+                return date.valueOf() < now.valueOf() ? 'disabled' : '';
+            }
+        }).on('changeDate', function(ev) {
+                if (ev.date.valueOf() > checkout.date.valueOf()) {
+                    var newDate = new Date(ev.date)
+                    newDate.setDate(newDate.getDate() + 1);
+                    checkout.setValue(newDate);
+                }
+                checkin.hide();
+                $('#dpd2')[0].focus();
+            }).data('datepicker');
+        var checkout = $('#dpd2').datetimepicker({
+            onRender: function(date) {
+                return date.valueOf() <= checkin.date.valueOf() ? 'disabled' : '';
+            }
+        }).on('changeDate', function(ev) {
+                checkout.hide();
+            }).data('datetimepicker');
+    
+
 	$("#forgot_form").validate({
 		rules: {
 			email: {
@@ -281,7 +302,9 @@ $(document).ready(function(){
 	});
 	
 
-	$("#leader_form").validate({
+
+    $("#leader_form").validate({
+
 		rules: {
 		    leadertitle: "required",
 			position: "required",
@@ -302,8 +325,8 @@ $(document).ready(function(){
 			image:"This field is required",
 			status:"required",
 			summary:"This field is required",
-		},
-       
+		}
+
 	});
 
 	$("#page-form").validate();
