@@ -27,8 +27,10 @@ if(isset($_POST['submit']) && isset($_GET['id']))
 	elseif(isset($_POST['old_image']))
 	$image=$_POST['old_image'];
 	
+
 	$sqlobj->query("update events set event_title='$event_title',start_date_and_time='$stdate',
 	end_date_and_time='$enddate',event_head='$event_head',status='$status',image='$image',event_contact='$event_contact', event_website='$event_website',no_of_participant='$no_of_participant' where id=".$_GET['id']);
+
 	header("location:events_management.php");
 }
 elseif(isset($_POST['submit']))
@@ -63,9 +65,9 @@ $events=$sqlobj->query("select * from events where id=".$_GET['id']);
 $mang=$events[0];
 }
 
-
 if(file_exists(TEMPLATE_PATH.$page.'.php'))
 	include(TEMPLATE_PATH.'common.php');
 else
 	echo 'Template file not found';
+
 	?>	

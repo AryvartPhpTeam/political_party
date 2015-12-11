@@ -29,10 +29,12 @@
 	<!-- ck editor -->
     <script type="text/javascript" src="<?php echo ASSETS;?>ckeditor/ckeditor.js"></script>
 
+
 	<script src="<?php echo JS;?>jquery-ui-1.9.2.custom.min.js"></script>
 	<script src="<?php echo JS;?>datepicker.js"></script>
 	<script src="<?php echo JS;?>timepicker.js"></script>
 	<!--custom tagsinput-->
+
 
     <!--custome script for all page-->
     <script src="<?php echo JS;?>scripts.js"></script>
@@ -65,20 +67,20 @@
 
       //carousel
       $(document).ready(function() {
-          $("#owl-slider").owlCarousel({
-              navigation : true,
-              slideSpeed : 300,
-              paginationSpeed : 400,
-              singleItem : true
+			$("#owl-slider").owlCarousel({
+			navigation : true,
+            slideSpeed : 300,
+            paginationSpeed : 400,
+            singleItem : true
 
           });
-      });
+		});
 
       //custom select box
 
       $(function(){
           $('select.styled').customSelect();
-      });
+        });
 	  
 	  /* ---------- Map ---------- */
 	$(function(){

@@ -5,7 +5,7 @@
 				<div class="col-lg-12">
 					<h3 class="page-header"><i class="fa fa-file-text-o"></i> Events Management</h3>
 					<ol class="breadcrumb">
-						<li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
+						<li><i class="fa fa-home"></i><a href="<?php echo BASE_URL.'admin/dashboard.php'?>">Home</a></li>
 						<li><i class="fa fa-file-text-o"></i>Events Management</li>
 					</ol> 
 				</div>

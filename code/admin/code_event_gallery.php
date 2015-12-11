@@ -42,12 +42,17 @@ elseif(isset($_POST['submit']))
 }
 
 
+
 $event_res = $sqlobj->query("select * from events ");
 if(isset($_GET['id']) && !empty($_GET['id']))
 {
 	$manage_res = $sqlobj->query("select * from event_gallery where id = ".$_GET['id']);
 	$manage = $manage_res[0];
 }
+
+	$event_res = $sqlobj->query("select * from events_galerry ");
+	
+
   
 
 if(file_exists(TEMPLATE_PATH.$page.'.php'))
