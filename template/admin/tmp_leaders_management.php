@@ -5,7 +5,7 @@
 				<div class="col-lg-12">
 					<h3 class="page-header"><i class="fa fa-file-text-o"></i> Leaders Management</h3>
 					<ol class="breadcrumb">
-						<li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
+						<li><i class="fa fa-home"></i><a href="<?php echo BASE_URL.'admin/dashboard.php'?>">Home</a></li>
 						<li><i class="fa fa-file-text-o"></i>leaders Management</li>
 					</ol> 
 				</div>
@@ -44,6 +44,7 @@
 								  <th><i class=""></i>Age</th>
 								  <th><i class=""></i>Date Of Birth</th>
 								  <th><i class=""></i>Native Place</th>
+								  <th><i class=""></i>Image</th>
 								  <th><i class=""></i>Status</th>
 								  <th><i class=""></i>Summary</th>
 								  
@@ -58,6 +59,7 @@
 								 <td><?php echo $res['age']?></td>
 								 <td><?php echo date("d-m-Y", strtotime($res['date_of_birth']))?></td>
 								 <td><?php echo $res['native_place']?></td>
+								  <td><img src="<?php echo BASE_URL.'uploads/'.$res['image']?>" width="50" height="50"></td>
 								 <td><?php echo $res['status']?></td>
 								 <td><?php echo $res['summary']?></td>
 								 <td>
@@ -71,6 +73,8 @@
                            </tbody>
                         </table>
 						</form>
+						<?php echo $ownobj->getpagination('leaders', $page, $per_page);?>
+					  </section>
                       </section>
                   </div>
               </div>

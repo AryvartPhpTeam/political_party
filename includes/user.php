@@ -26,7 +26,12 @@ class Customfunc {
 		global $sqlobj;
 		
 		$current_page = isset($_GET['page']) ? $_GET['page'] : 1;
-		$no_of_results = $sqlobj->query("select count(*) as cnt from $table")[0]['cnt'];
+		$no_of_results = $sqlobj->query("select count(*) as cnt from $table");
+		
+		if(count($no_of_results))
+			$no_of_results = $no_of_results[0]['cnt'];
+		else
+			return;
 		
 		$total_pages = ceil($no_of_results/$per_page);
 		$html = '<div class="text-center"><ul class="pagination">';

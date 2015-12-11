@@ -20,7 +20,7 @@
                               Add Leaders
                           </header>
                           <div class="panel-body">
-                              <form class="form-horizontal " method="post"  id= "leader_form"  novalidate >
+                              <form class="form-horizontal " method="post"  id= "leader_form" enctype="multipart/form-data" novalidate >
                                   
                                   <div class="form-group">
                                       <label class="col-sm-2 control-label">Leader Title</label>
@@ -51,7 +51,7 @@
 								  <div class="form-group">
                                       <label class="col-sm-2 control-label">Date Of Birth</label>
                                       <div class="col-sm-10">
-                                          <input id="dp4" type="text" required name="dob" value="<?php echo isset($lead) ? $lead['date_of_birth'] : '';?>" id="dob" class="form-control" >
+                                        <input id="dp4" type="text" required name="dob" value="<?php echo isset($lead) ? $lead['date_of_birth'] : '';?>" id="dob" class="form-control" >
                                       </div>
                                   </div>
 								  <div class="form-group">
@@ -61,12 +61,22 @@
                                       </div>
                                   </div>
 								  <div class="form-group">
+                                      <label class="col-sm-2 control-label">Image</label>
+                                      <div class="col-sm-10">
+                                          <input type="file" name="image" placeholder="placeholder">
+										  <?php if(isset($lead) && !empty($lead['image'])) {?>
+											<img src="<?php echo BASE_URL.'uploads/'.$lead['image']?>" width="50" height="50">
+											<input type="hidden" name="old_image" value="<?php echo $lead['image'];?>">
+										  <?php }?>
+                                      </div>
+                                  </div>
+								  <div class="form-group">
                                       <label class="col-sm-2 control-label">status</label>
                                       <div class="col-sm-10">
                                           <select name="status"  class="form-control">
 										  <option value="" id="status" >status</option>
-										  <option <?php echo isset($lead) && $lead['status']=='yes' ? 'selected':'' ?> value="no">yes</option>
-										  <option <?php echo isset($lead) && $lead['status']=='no' ? 'selected':''?> value="yes">no</option>
+										  <option <?php echo isset($lead) && $lead['status']=='yes' ? 'selected':'' ?> value="yes">yes</option>
+										  <option <?php echo isset($lead) && $lead['status']=='no' ? 'selected':''?> value="no">no</option>
 										  </select>
                                       </div>
                                   </div>

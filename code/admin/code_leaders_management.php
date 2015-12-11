@@ -22,6 +22,7 @@ if(isset($_POST["submit"])&& isset($_POST["select"]))
 	if($chek== 'delete')
 		{	
 			$sqlobj->query("delete from leaders where id ($checked)");
+			header("location:leaders_mangement.php");
 		}
 	elseif($chek == 'publish')
 		{ 
@@ -34,7 +35,9 @@ if(isset($_POST["submit"])&& isset($_POST["select"]))
 		$sqlobj->query("UPDATE leaders SET status='no' WHERE id IN ($cheked)");
 		header("location:leaders_management.php");
 		}
-}		
+}
+$per_page = 10;
+$slider_res = $ownobj->getpageresults('slider', $per_page);		
 if(file_exists(TEMPLATE_PATH.$page.'.php'))
 	include(TEMPLATE_PATH.'common.php');
 else

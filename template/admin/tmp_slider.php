@@ -1,4 +1,3 @@
-
 <!--main content start-->
       <section id="main-content">
           <section class="wrapper">
@@ -44,7 +43,7 @@
 								 <th>Status</th>
 								 <th>Author</th>
                                  <th>Action</th>
-                              </tr>
+                            </tr>
                               <?php foreach($slider_res as $res){?>
 							  <tr>
 							     <td><input type="checkbox" class="checkbox" name="check[]"  value="<?php echo $res['id']; ?>"/></td>
@@ -67,8 +66,6 @@
                       
 					  <?php echo $ownobj->getpagination('slider', $page, $per_page);?>
 					  </section>
-						
-						
 						
                   </div>
               </div>
