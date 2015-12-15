@@ -30,11 +30,15 @@ if(isset($_POST['submit']) && isset($_POST["data"] ))
 			header("location:blog_category.php");	
 		}
 	}
+	$blog_result = $sqlobj->query("select t.id,t.category_name,count(s.category) as post,t.status from blog_category t left outer join blogs s on s.category=t.id group by(t.category_name)");
 $per_page = 10;
 $blog_res = $ownobj->getpageresults('blog_category', $per_page);
+
 
 if(file_exists(TEMPLATE_PATH.$page.'.php'))
 	include(TEMPLATE_PATH.'common.php');
 else
 	echo 'Template file not found';
-	?>
+
+
+

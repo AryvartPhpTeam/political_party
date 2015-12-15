@@ -54,7 +54,7 @@
                           <li><a class="" href="<?php echo BASE_URL.'admin/add_blog_category.php'?>">Add Blog Category</a></li>
                           <li><a class="" href="<?php echo BASE_URL.'admin/blog_category.php'?>">Blog Category </a></li>
                           <li><a class="" href="<?php echo BASE_URL.'admin/add_blog.php'?>">Add Blog</a></li>
-
+						  <li><a class="" href="<?php echo BASE_URL.'admin/blog.php'?>">Blog Management </a></li>
                       </ul>
                   </li>	  
                   </li>  
