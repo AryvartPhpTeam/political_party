@@ -1,4 +1,5 @@
 <?php
+$title="Dashboard";
 if(isset($_POST['submit']))
 {
 	$username = $_POST['username'];

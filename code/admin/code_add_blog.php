@@ -4,6 +4,7 @@ if(!isset($_SESSION['user']))
 	header("location:index.php");
 	exit;
 }
+$title="Add Blog";
 if(isset($_POST['submit']) && isset($_GET['id']))
 {
 	$title = $_POST['title'];

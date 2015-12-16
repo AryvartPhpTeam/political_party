@@ -1,5 +1,5 @@
 <?php
-
+$title="Login";
 
 if(isset($_POST['submit']))
 {

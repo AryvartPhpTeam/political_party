@@ -4,6 +4,7 @@ if(!isset($_SESSION['user']))
 	header("location:login.php");
 	exit;
 }
+$title="Add Leaders";
 if(isset($_POST['submit']) && isset($_GET['id']))
 {	
 	$leader_title=$_POST['leadertitle'];

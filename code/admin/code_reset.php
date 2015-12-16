@@ -4,6 +4,7 @@ if(isset($_SESSION['user']))
 	header("location:dashboard.php");
 	exit;
 }
+$title="Reset";
 if(isset($_GET['verify'])&& !empty($_GET['verify']))
 {
     $email=base64_decode(base64_decode($_GET['verify']));	

@@ -4,7 +4,7 @@ if(!isset($_SESSION['user']))
 	header("location:login.php");
 	exit;
 }
-
+$title= "Page Management";
 if(isset($_GET['delete']) && !empty($_GET['delete']))
 {
 	$sqlobj->query("delete from pages where id=".$_GET['delete']);
