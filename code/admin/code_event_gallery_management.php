@@ -12,9 +12,8 @@ if(isset($_GET['delete']) && !empty($_GET['delete']))
 	exit;
 }
 
-
-$gallery_res = $sqlobj->query("SELECT  e.event_title,g.event_id,g.image,g.id FROM event_gallery g INNER JOIN events e ON g.event_id=e.id");
-
+$per_page = 10;
+$manage_res = $ownobj->getpageresults('event_gallery', $per_page);
 
 if(file_exists(TEMPLATE_PATH.$page.'.php'))
 	include(TEMPLATE_PATH.'common.php');

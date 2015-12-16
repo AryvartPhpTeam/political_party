@@ -43,4 +43,11 @@ class Customfunc {
 		
 		return $html;
 	}
+	function geteventtitle($id)
+	{
+		global $sqlobj;
+		
+		$manage_res = $sqlobj->query("select event_title from events where id = ".$id);
+		return $manage_res[0]['event_title'];
+	}
 }

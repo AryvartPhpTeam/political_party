@@ -1,10 +1,10 @@
 <?php
 define ( 'DB_HOST', 'localhost' );
 define ( 'DB_USER', 'root' );
-define ( 'DB_PASSWORD', '' );
+define ( 'DB_PASSWORD', '123' );
 define ( 'DB_DB', 'political_party' );
 
-define ( 'BASE_URL', 'http://localhost/political/project/' );
+define ( 'BASE_URL', 'http://localhost/project/political_party/' );
 define ( 'BASE_PATH', dirname ( __FILE__ ).'/../' );
 
 define ( 'INCLUDE_PATH', BASE_PATH.'includes/' );
