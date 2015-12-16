@@ -4,6 +4,7 @@ if(!isset($_SESSION['user']))
 	header("location:login.php");
 	exit;
 }
+$title=" Add News ";
 if(isset($_POST['submit']) && isset($_GET['id']))
 {
 	$title = $_POST['title'];

@@ -4,7 +4,7 @@ if(!isset($_SESSION['user']))
 	header("location:login.php");
 	exit;
 }
-
+$title="Change Password";
 if(isset($_POST['submit']))
 {
 	$results = $sqlobj->query("SELECT id,password from users where id =". $_SESSION['user']['id']);

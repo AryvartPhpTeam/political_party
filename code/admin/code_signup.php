@@ -4,6 +4,7 @@ if(isset($_SESSION['user']))
 	header("location:dashboard.php");
 	exit;
 }
+$title="Signup Page";
 if(isset($_POST['submit']))
 {
 	$username = $_POST['username'];

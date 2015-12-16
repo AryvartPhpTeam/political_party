@@ -1,5 +1,5 @@
 <?php
-
+$title="Setting Page";
 if(isset($_POST['submit']))
 {
 	$site_title = $_POST['sitetitle'];

@@ -4,7 +4,7 @@
               <!-- sidebar menu start-->
               <ul class="sidebar-menu">                
                   <li class="active">
-                      <a class="" href="<?php echo BASE_URL.'admin/'?>">
+                      <a class="" href="<?php echo BASE_URL.'admin/dashboard.php'?>">
                           <i class="icon_house_alt"></i>
                           <span>Dashboard</span>
                       </a>

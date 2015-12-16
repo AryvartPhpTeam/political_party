@@ -1,5 +1,5 @@
 <?php
-
+$title=" Add Slider";
 if(isset($_POST['submit']) && isset($_GET['id']))
 {
 	$title = $_POST['title'];

@@ -4,6 +4,7 @@ if(isset($_SESSION['user']))
 	header("location:dashboard.php");
 	exit;
 }
+$title="Forgot";
 if(isset($_POST['submit']))
 {
 $email=$_POST['email'];

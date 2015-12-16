@@ -4,6 +4,7 @@ if(!isset($_SESSION['user']))
 	header("location:login.php");
 	exit;
 }
+$title="Blog Management";
 
 if(isset($_GET['delete']) && !empty($_GET['delete']))
 {

@@ -3,7 +3,7 @@
           <section class="wrapper">
 		  <div class="row">
 				<div class="col-lg-12">
-					<h3 class="page-header"><i class="fa fa-file-text-o"></i> Add blogs</h3>
+					<h3 class="page-header"><i class="fa fa-file-text-o"></i> <?php echo $title;?></h3>
 					<ol class="breadcrumb">
 						<li><i class="fa fa-home"></i><a href="<?php echo BASE_URL.'admin/dashboard.php'?>">Home</a></li>
 						<li><i class="icon_document_alt"></i>Add blogs</li>

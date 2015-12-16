@@ -4,6 +4,7 @@ if(!isset($_SESSION['user']))
 	header("location:login.php");
 	exit;
 }
+$title="Event Gallery";
 if(isset($_POST['submit']) && isset($_GET['id']))
 {
 	$event_title = $_POST['event_title'];

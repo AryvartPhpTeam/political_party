@@ -4,6 +4,7 @@ if(!isset($_SESSION['user']))
 	header("location:login.php");
 	exit;
 }
+$title="Blog Category";
 if(isset($_POST['submit']) && isset($_GET['id']))
 {
 	$category_name = $_POST['category_name'];
