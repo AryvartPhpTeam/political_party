@@ -50,11 +50,7 @@ if(isset($_GET['id']) && !empty($_GET['id']))
 	$manage = $manage_res[0];
 }
 
-	$event_res = $sqlobj->query("select * from events_galerry ");
 	
-
-  
-
 if(file_exists(TEMPLATE_PATH.$page.'.php'))
 	include(TEMPLATE_PATH.'common.php');
 else

@@ -29,9 +29,9 @@
                                  <th><i class=""></i>Image</th>
 								 <th><i class="icon_cogs"></i> Action</th>
                             </tr>
-                              <?php foreach($gallery_res as $res){?>
+                              <?php foreach($manage_res as $res){?>
 							<tr>
-                                 <td><?php echo $res['event_title']?></td>
+                                 <td><?php echo $ownobj->geteventtitle($res['event_id']); ?></td>
                                  <td><img src="<?php echo BASE_URL.'uploads/'.$res['image']?>" width="50" height="50"></td>
                                  <td>
                                   <div class="btn-group">
