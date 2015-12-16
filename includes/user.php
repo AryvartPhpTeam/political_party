@@ -9,7 +9,7 @@ class Customfunc {
 		return $news_res[0]['username'];
 	}
 	
-	function getpageresults($table, $per_page = 10)
+	function getpageresults($table, $per_page = 10, $sql = '')
 	{
 		global $sqlobj;
 		
@@ -17,7 +17,11 @@ class Customfunc {
 		
 		$start_limit = ($current_page - 1) * $per_page;
 
-		return $slider_res = $sqlobj->query("select * from $table limit $start_limit, $per_page");	
+		if($sql == '')
+			$sql = ("select * from $table ");
+
+
+		return $slider_res = $sqlobj->query("$sql limit $start_limit, $per_page");	
 		
 	}
 	
@@ -43,4 +47,12 @@ class Customfunc {
 		
 		return $html;
 	}
+	function getcategory_name($id) 
+	{
+		global $sqlobj;
+		$blog_result=$sqlobj->query("SELECT category_name FROM blog_category WHERE id=".$id);
+    	return $blog_result[0]['category_name'];
+
+	}
+	
 }

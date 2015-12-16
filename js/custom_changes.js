@@ -380,27 +380,3 @@ $(document).ready(function() {
 
 });
 
-	function  Myfunction(){
-	var rowcount=$('input:checkbox:checked').length;
-	var str=document.getElementById("select").value;
-	if(str == 'delete'){
-	if(confirm("Are you sure want to delete it"+rowcount))
-	{
-	return true;
-	}
-	else{
-	return false;
-	}
-	}
-	
-	}
-function Myfunction(){
-	if(submit == true)
-	{
-		document.location.href='code_blog_category.php';
-	}
-	else{
-		return false;
-	}
-}
-

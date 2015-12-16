@@ -32,7 +32,7 @@ if(isset($_POST["submit"])&& isset($_POST["select"]))
 		}
 }	
 $per_page = 10;
-$slider_res = $ownobj->getpageresults('slider', $per_page);
+$slider_res = $ownobj->getpageresults('events', $per_page);
 	
 if(file_exists(TEMPLATE_PATH.$page.'.php'))
 	include(TEMPLATE_PATH.'common.php');

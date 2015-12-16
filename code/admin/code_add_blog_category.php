@@ -17,7 +17,7 @@ elseif(isset($_POST['submit']))
 {
 	$category_name = $_POST['category_name'];
 	$status = $_POST['status'];
-	$sqlobj->query("insert into blog_category(category_name,status) values('$category_name','$status')");
+	echo $sqlobj->query("insert into blog_category(category_name,status) values('$category_name','$status')");
 	
 	header("location:blog_category.php");
 }
