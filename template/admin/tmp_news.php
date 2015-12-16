@@ -39,7 +39,7 @@
                                  <td><?php echo $res['title']?></td>
                                  <td><?php echo $res['description']?></td>
                                  <td><img src="<?php echo BASE_URL.'uploads/'.$res['image']?>" width="50" height="50"></td>
-								 <td><?php echo $ownobj->getusername($res['user_id']);?></td>
+								                  <td><?php echo $ownobj->getusername($res['user_id']);?></td>
                                  <td>
                                   <div class="btn-group">
                                       <a class="btn btn-primary" href="<?php echo BASE_URL.'admin/add_news.php?id='.$res['id']?>"><i class="icon_plus_alt2"></i></a>

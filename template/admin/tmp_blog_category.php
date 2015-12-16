@@ -37,7 +37,7 @@
                               <tr>
 								 <th><input type="checkbox" id="check"/></th>
                                  <th><i class=""></i>Name</th>
-								 <th><i class=""></i>Post</th>
+								                <th><i class=""></i>Post</th>
                                  <th><i class=""></i>status</th>
                                  <th><i class=""></i> Action</th>
                               </tr>
@@ -45,12 +45,12 @@
 							  <tr>
 								 <td><input type="checkbox" class="checkbox" name="check[]"  value="<?php echo $res['id']; ?>"/></td>
                                  <td><?php echo $res['category_name']?></td>
-								 <td><?php echo $res['post']?></td>
+								                <td><?php echo $res['post']?></td>
                                  <td><?php echo $res['status']?></td>
-								 <td>
+								                 <td>
                                   <div class="btn-group">
                                       <a class="btn btn-primary" href="<?php echo BASE_URL.'admin/add_blog_category.php?id='.$res['id']?>"><i class="icon_plus_alt2"></i></a>
-                                      <a class="btn btn-danger" href="<?php echo BASE_URL.'admin/blog_category.php?delete='.$res['id']?>" onclick="return confirm('Are you sure delete it <?php echo $res['category_name'];?>')";><i class="icon_close_alt2"></i></a>
+                                      <a class="btn btn-danger" href="<?php echo BASE_URL.'admin/blog_category.php?delete='.$res['id']?>" onclick="return confirm('Are you sure delete  <?php echo $res['post'];?> post under this category ')";><i class="icon_close_alt2"></i></a>
                                   </div>
                                   </td>
                               </tr>

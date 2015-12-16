@@ -15,7 +15,7 @@
                   <div class="col-lg-12">
                       <section class="panel">
                           <header class="panel-heading">
-						      <?php echo isset($blog) ? 'Edit' : 'Add';?> Form 
+						               <?php echo isset($blog) ? 'Edit' : 'Add';?> Form 
                              </header>
                           <div class="panel-body">
                               <form class="form-horizontal " method="post" enctype="multipart/form-data" id="blog_category_form">

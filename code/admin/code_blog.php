@@ -26,14 +26,17 @@ if(isset($_POST['submit']) && isset($_POST["bulk"] ))
 			header("location:blog.php");	
 		}
 	}
+
 $per_page = 10;
-$blog_res = $ownobj->getpageresults('blogs', $per_page);
-
-$blog_result = $sqlobj->query("select c.category_name,b.id, b.title,b.category,b.description,b.status from blogs b inner join blog_category c on b.category = c.id " );
+$blog_result = $ownobj->getpageresults('blogs', $per_page);
 
 
+
+ 
 if(file_exists(TEMPLATE_PATH.$page.'.php'))
 	include(TEMPLATE_PATH.'common.php');
 else
 	echo 'Template file not found';
 	?>
+
+	

@@ -7,6 +7,7 @@ if(!isset($_SESSION['user']))
 if(isset($_GET['delete']) && !empty($_GET['delete']))
 {
 	$sqlobj->query("delete from blog_category where id=".$_GET['delete']);
+	
 	header("location:blog_category.php");
 	exit;
 }
@@ -30,9 +31,10 @@ if(isset($_POST['submit']) && isset($_POST["data"] ))
 			header("location:blog_category.php");	
 		}
 	}
-	$blog_result = $sqlobj->query("select t.id,t.category_name,count(s.category) as post,t.status from blog_category t left outer join blogs s on s.category=t.id group by(t.category_name)");
+	$sql="select t.id,t.category_name,count(s.category) as post,t.status from blog_category t left join blogs s on s.category=t.id group by(t.category_name)";
+
 $per_page = 10;
-$blog_res = $ownobj->getpageresults('blog_category', $per_page);
+$blog_result = $ownobj->getpageresults('blog_category', $per_page, $sql);
 
 
 if(file_exists(TEMPLATE_PATH.$page.'.php'))

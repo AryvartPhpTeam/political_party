@@ -35,21 +35,21 @@
 						<table class="table table-striped table-advance table-hover">
 						  <tbody>
                             <tr>
-									<th><input type="checkbox" id="check"/></th>
+									               <th><input type="checkbox" id="check"/></th>
                                  <th><i class=""></i>Title</th>
-								 <th><i class=""></i>Category</th>
+								                <th><i class=""></i>Category</th>
                                  <th><i class=""></i>Description</th>
-								 <th><i class=""></i>Status</th>
-								 <th><i class="icon_cogs"></i> Action</th>
+								                 <th><i class=""></i>Status</th>
+								                <th><i class="icon_cogs"></i> Action</th>
                             </tr>
                               <?php foreach($blog_result as $res){?>
-							<tr>
-							     <td><input type="checkbox" class="checkbox" name="check[]" value="<?php echo $res['id']; ?>"/></td>
-                                 <td><?php echo $res['title']?></td>
-								 <td><?php echo $res['category_name']?></td>
+							               <tr>
+							                   <td><input type="checkbox" class="checkbox" name="check[]" value="<?php echo $res['id']; ?>"/></td>
+                                 <td><?php echo $res['title']; ?></td>
+                                 <td><?php echo $ownobj->getcategory_name($res['category']);?></td>								                
                                  <td><?php echo $res['description']?></td>
-								 <td><?php echo $res['status']?></td>
-								 <td>
+								                 <td><?php echo $res['status']?></td>
+								                 <td>
                                   <div class="btn-group">
                                       <a class="btn btn-primary" href="<?php echo BASE_URL.'admin/add_blog.php?id='.$res['id']?>"><i class="icon_plus_alt2"></i></a>
                                       <a class="btn btn-danger" href="<?php echo BASE_URL.'admin/blog.php?delete='.$res['id']?>"><i class="icon_close_alt2"></i></a>
@@ -74,3 +74,4 @@
           </section>
       </section>
       <!--main content end-->
+      
